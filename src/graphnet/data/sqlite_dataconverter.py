@@ -141,6 +141,8 @@ class SQLiteDataConverter(DataConverter):
             while i3_file.more():
                 try:
                     frame = i3_file.pop_physics()
+                    if frame['I3EventHeader'].sub_event_stream == 'NullSplit':
+                        continue  
                 except:
                     continue
 
