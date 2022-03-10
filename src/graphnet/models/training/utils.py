@@ -112,7 +112,7 @@ def make_train_validation_dataloader(
         **common_kwargs,
     )
 
-    return training_dataloader, validation_dataloader  # , {'valid_selection':validation_selection, 'training_selection':training_selection}
+    return training_dataloader, validation_dataloader  
 
 def get_predictions(trainer, model, dataloader, prediction_columns, additional_attributes=None):
     # Check(s)
