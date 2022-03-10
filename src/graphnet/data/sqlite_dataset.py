@@ -143,7 +143,7 @@ class SQLiteDataset(torch.utils.data.Dataset):
         labels_dict = {
             'event_no': truth_dict['event_no'],
             'muon': int(abs_pid == 13),
-            'muon_stopped': int(truth_dict.get('stopped_muon') == 1),
+            'stopped_muon': int(truth_dict.get('stopped_muon') == 1),
             'noise': int((abs_pid == 1) & (sim_type != 'data')),
             'neutrino': int((abs_pid != 13 ) & (abs_pid != 1 )),  # `abs_pid in [12,14,16]`?
             'v_e': int(abs_pid == 12),
